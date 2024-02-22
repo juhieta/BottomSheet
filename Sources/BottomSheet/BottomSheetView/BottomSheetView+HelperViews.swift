@@ -32,7 +32,9 @@ internal extension BottomSheetView {
     }
     
     func bottomSheet(with geometry: GeometryProxy) -> some View {
-        VStack(
+        self.configuration.onHeightChanged(self.height(with: geometry), self.translation != 0)
+
+        return VStack(
             alignment: .center,
             spacing: 0
         ) {

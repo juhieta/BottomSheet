@@ -211,6 +211,10 @@ The ViewModifiers are used to customise the look and feel of the BottomSheet.
 `.onDismiss(() -> Void)`: A action that will be performed when the BottomSheet is dismissed.
 -  Please note that when you dismiss the BottomSheet yourself, by setting the bottomSheetPosition to .hidden, the action will not be called.
 
+`.onHeightChanged((CGFloat, Bool) -> Void)`: A action that will be performed when the BottomSheet height is changed.
+-  Please note that this function will not be called with 0 value when bottom sheet is dismissed. It's only called when bottom sheet is visible.
+- The action parameters contain the current BottomSheet height and boolean value indicating if sheet is being dragged (true if dragged).
+
 `.isResizable(Bool)`: Makes it possible to resize the BottomSheet.
 - When disabled the drag indicator disappears.
 

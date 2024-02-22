@@ -55,6 +55,7 @@ internal class BottomSheetConfiguration: Equatable {
     var isSwipeToDismissEnabled: Bool = false
     var isTapToDismissEnabled: Bool = false
     var onDismiss: () -> Void = {}
+    var onHeightChanged: (CGFloat, Bool) -> Void = {_,_ in }
     var onDragEnded: (DragGesture.Value) -> Void = { _ in }
     var onDragChanged: (DragGesture.Value) -> Void = { _ in }
     var threshold: Double = 0.3
